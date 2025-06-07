@@ -68,16 +68,10 @@ interface ChatCompletionResponse {
  * Interface defining the input to the ChatBaiduWenxin class.
  */
 declare interface BaiduWenxinChatInput {
-  /**
-   * Model name to use. Available options are: ERNIE-Bot, ERNIE-Bot-turbo, ERNIE-Bot-4
-   * Alias for `model`
-   * @default "ERNIE-Bot-turbo"
-   */
-  modelName: string;
   /** Model name to use. Available options are: ERNIE-Bot, ERNIE-Bot-turbo, ERNIE-Bot-4
    * @default "ERNIE-Bot-turbo"
    */
-  model: string;
+  model?: string;
 
   /** Whether to stream the results or not. Defaults to false. */
   streaming?: boolean;
@@ -242,8 +236,6 @@ export class ChatBaiduWenxin
 
   userId?: string;
 
-  modelName = "ERNIE-Bot-turbo";
-
   model = "ERNIE-Bot-turbo";
 
   apiUrl: string;
@@ -279,8 +271,7 @@ export class ChatBaiduWenxin
     this.topP = fields?.topP ?? this.topP;
     this.penaltyScore = fields?.penaltyScore ?? this.penaltyScore;
 
-    this.modelName = fields?.model ?? fields?.modelName ?? this.model;
-    this.model = this.modelName;
+    this.model = fields?.model ?? this.model;
 
     const models: Models = {
       "ERNIE-Bot": "completions",
