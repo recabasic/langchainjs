@@ -4,3 +4,4 @@ packages:
   - "examples"
   - "docs/*"
   - "internal/*"
+  - "libs/providers/langchain-google/e2e"
