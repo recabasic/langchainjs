@@ -37,6 +37,7 @@ import {
   END,
   START,
   getConfig,
+  type GraphInterrupt,
 } from "@langchain/langgraph";
 
 import type {
@@ -475,7 +476,6 @@ export function createReactAgent<
     stateSchema,
     contextSchema,
     checkpointSaver,
-    checkpointer,
     interruptBefore,
     interruptAfter,
     store,
@@ -485,6 +485,7 @@ export function createReactAgent<
     name,
     includeAgentName,
     asStateGraph,
+    thread,
   } = params;
 
   let toolClasses: (ClientTool | ServerTool)[];
@@ -497,6 +498,16 @@ export function createReactAgent<
     toolClasses = tools;
     toolNode = new ToolNode(toolClasses.filter(isClientTool));
   }
+
+  /**
+   * agent can either use a thread or a checkpointer
+   */
+  if (params.checkpointer && thread) {
+    throw new Error(
+      "Cannot use both a thread and a checkpointer. Please provide only one."
+    );
+  }
+  const checkpointer = thread?.checkpointer ?? checkpointSaver;
 
   let cachedStaticModel: Runnable | null = null;
 
@@ -757,6 +768,10 @@ export function createReactAgent<
     name,
   });
 
+  if (thread) {
+    thread.agent = agent as unknown as ReactAgent;
+  }
+
   /**
    * If `asStateGraph` is false, we return a proxy that allows to access the
    * initiation properties This is useful for testing agent hooks and other
@@ -795,3 +810,15 @@ export * from "./types.js";
 export * from "./resume.js";
 export type LangGraphRunnableConfig = ReturnType<typeof getConfig>;
 export { interrupt } from "@langchain/langgraph";
+export { Thread } from "./thread.js";
+
+export function hasInterrupt(
+  result: unknown
+): result is { __interrupt__: GraphInterrupt } {
+  return (
+    result != null &&
+    typeof result === "object" &&
+    "__interrupt__" in result &&
+    result.__interrupt__ != null
+  );
+}

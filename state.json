@@ -1,0 +1,263 @@
+{
+  "config": {
+    "configurable": {
+      "thread_id": "conversation-1",
+      "checkpoint_id": "1f077b97-8eb3-6160-8004-87ee47a46e49",
+      "checkpoint_ns": ""
+    }
+  },
+  "checkpoint": {
+    "v": 4,
+    "id": "1f077b97-8eb3-6160-8004-87ee47a46e49",
+    "ts": "2025-08-12T20:18:12.982Z",
+    "channel_values": {
+      "messages": [
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "HumanMessage"
+          ],
+          "kwargs": {
+            "content": "Find out what is 5 + 5 and give me a summary of the result?",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "12536591-f079-47f0-8175-f70229b0e94b"
+          }
+        },
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "AIMessage"
+          ],
+          "kwargs": {
+            "content": "",
+            "additional_kwargs": {
+              "tool_calls": [
+                {
+                  "id": "call_clqa4h1jNUvjcKZPhPLi3JpR",
+                  "type": "function",
+                  "function": {
+                    "name": "sum",
+                    "arguments": "{\"a\": 5, \"b\": 5}"
+                  }
+                },
+                {
+                  "id": "call_Ts7deyoFJqwUdXWimu0R2Xk0",
+                  "type": "function",
+                  "function": {
+                    "name": "research_summary",
+                    "arguments": "{\"result\": \"5 + 5 = 10\"}"
+                  }
+                }
+              ]
+            },
+            "response_metadata": {
+              "tokenUsage": {
+                "promptTokens": 100,
+                "completionTokens": 54,
+                "totalTokens": 154
+              },
+              "finish_reason": "tool_calls",
+              "model_name": "gpt-4o-2024-08-06",
+              "usage": {
+                "prompt_tokens": 100,
+                "completion_tokens": 54,
+                "total_tokens": 154,
+                "prompt_tokens_details": {
+                  "cached_tokens": 0,
+                  "audio_tokens": 0
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0,
+                  "audio_tokens": 0,
+                  "accepted_prediction_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                }
+              },
+              "system_fingerprint": "fp_ff25b2783a"
+            },
+            "id": "chatcmpl-C3pjerlNxdBfhPEugrcuu2CNyzAQZ",
+            "tool_calls": [
+              {
+                "name": "sum",
+                "args": {
+                  "a": 5,
+                  "b": 5
+                },
+                "type": "tool_call",
+                "id": "call_clqa4h1jNUvjcKZPhPLi3JpR"
+              },
+              {
+                "name": "research_summary",
+                "args": {
+                  "result": "5 + 5 = 10"
+                },
+                "type": "tool_call",
+                "id": "call_Ts7deyoFJqwUdXWimu0R2Xk0"
+              }
+            ],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "output_tokens": 54,
+              "input_tokens": 100,
+              "total_tokens": 154,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          }
+        },
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "ToolMessage"
+          ],
+          "kwargs": {
+            "content": "10",
+            "tool_call_id": "call_clqa4h1jNUvjcKZPhPLi3JpR",
+            "name": "sum",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "8fb2f0a6-2864-4417-8b2a-c204a7b90329"
+          }
+        },
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "ToolMessage"
+          ],
+          "kwargs": {
+            "content": "{\n  \"result\": \"5 + 5 = 10\",\n  \"summary\": \"The result indicates you should do 3 jumping jacks\"\n}",
+            "tool_call_id": "call_Ts7deyoFJqwUdXWimu0R2Xk0",
+            "name": "research_summary",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "id": "594dc3fd-1cb0-45cb-a397-70009f6a64c1"
+          }
+        },
+        {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain_core",
+            "messages",
+            "AIMessage"
+          ],
+          "kwargs": {
+            "content": "The result of 5 + 5 is 10. Additionally, the summary suggests that you should do 3 jumping jacks.",
+            "additional_kwargs": {},
+            "response_metadata": {
+              "tokenUsage": {
+                "promptTokens": 196,
+                "completionTokens": 28,
+                "totalTokens": 224
+              },
+              "finish_reason": "stop",
+              "model_name": "gpt-4o-2024-08-06",
+              "usage": {
+                "prompt_tokens": 196,
+                "completion_tokens": 28,
+                "total_tokens": 224,
+                "prompt_tokens_details": {
+                  "cached_tokens": 0,
+                  "audio_tokens": 0
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0,
+                  "audio_tokens": 0,
+                  "accepted_prediction_tokens": 0,
+                  "rejected_prediction_tokens": 0
+                }
+              },
+              "system_fingerprint": "fp_ff25b2783a"
+            },
+            "id": "chatcmpl-C3pjgKBGT39eDyHtST0XBvowCJmEa",
+            "tool_calls": [],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+              "output_tokens": 28,
+              "input_tokens": 196,
+              "total_tokens": 224,
+              "input_token_details": {
+                "audio": 0,
+                "cache_read": 0
+              },
+              "output_token_details": {
+                "audio": 0,
+                "reasoning": 0
+              }
+            }
+          }
+        }
+      ],
+      "__pregel_tasks": [
+        [],
+        []
+      ],
+      "branch:to:post_model_hook": null
+    },
+    "channel_versions": {
+      "__start__": 2,
+      "messages": 6,
+      "branch:to:agent": 6,
+      "branch:to:post_model_hook": 6,
+      "branch:to:tools": 5
+    },
+    "versions_seen": {
+      "__input__": {},
+      "__start__": {
+        "__start__": 1
+      },
+      "agent": {
+        "branch:to:agent": 5
+      },
+      "post_model_hook": {
+        "branch:to:post_model_hook": 3
+      },
+      "tools": {
+        "branch:to:tools": 4
+      }
+    }
+  },
+  "metadata": {
+    "source": "loop",
+    "step": 4,
+    "parents": {}
+  },
+  "pendingWrites": [
+    [
+      "f9c2f64e-2418-5d8c-a7af-1940c6b59f19",
+      "__interrupt__",
+      {
+        "id": "acdbfff56f1bd5702b4c8dfe1fc00c79",
+        "value": {
+          "reason": "You should do 3 jumping jacks"
+        }
+      }
+    ]
+  ],
+  "parentConfig": {
+    "configurable": {
+      "thread_id": "conversation-1",
+      "checkpoint_ns": "",
+      "checkpoint_id": "1f077b97-85be-69b0-8003-de907c807e76"
+    }
+  }
+}

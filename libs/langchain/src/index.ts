@@ -18,8 +18,10 @@ export { tool, DynamicStructuredTool } from "@langchain/core/tools";
  */
 export {
   interrupt,
+  hasInterrupt,
   resume,
   createReactAgent,
+  Thread,
   type CreateReactAgentState,
   type CreateReactAgentRuntime,
   type LangGraphRunnableConfig as CreateReactAgentToolConfig,

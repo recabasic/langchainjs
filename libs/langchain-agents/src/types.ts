@@ -23,6 +23,7 @@ import {
 
 import { ToolNode } from "./ToolNode.js";
 import { PreHookAnnotation } from "./PreHookAnnotation.js";
+import { Thread } from "./thread.js";
 
 export const META_EXTRAS_DESCRIPTION_PREFIX = "lg:";
 
@@ -202,4 +203,9 @@ export type CreateReactAgentParams<
    * @default false
    */
   asStateGraph?: AsStateGraph;
+
+  /**
+   * An optional thread to use for the agent.
+   */
+  thread?: Thread;
 };

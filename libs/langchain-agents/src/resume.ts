@@ -17,5 +17,6 @@ import { Command, interrupt } from "@langchain/langgraph";
 export function resume(reason: string) {
   return new Command({
     resume: reason,
+    graph: "tools",
   });
 }

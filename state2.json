@@ -1,0 +1,328 @@
+{
+  "values": {
+    "messages": [
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "HumanMessage"
+        ],
+        "kwargs": {
+          "content": "What is 5 + 5?",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "0e93885e-d392-4f37-9b10-69677954e89e"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "content": "",
+          "additional_kwargs": {
+            "tool_calls": [
+              {
+                "id": "call_RlzgrW0qnJrU93Sf5vlPJEme",
+                "type": "function",
+                "function": {
+                  "name": "sum",
+                  "arguments": "{\"a\":5,\"b\":5}"
+                }
+              }
+            ]
+          },
+          "response_metadata": {
+            "tokenUsage": {
+              "promptTokens": 70,
+              "completionTokens": 17,
+              "totalTokens": 87
+            },
+            "finish_reason": "tool_calls",
+            "model_name": "gpt-4o-2024-08-06",
+            "usage": {
+              "prompt_tokens": 70,
+              "completion_tokens": 17,
+              "total_tokens": 87,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "audio_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "audio_tokens": 0,
+                "accepted_prediction_tokens": 0,
+                "rejected_prediction_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_ff25b2783a"
+          },
+          "id": "chatcmpl-C3ntKW4YeLLqUSw519hisQ9MoOgcZ",
+          "tool_calls": [
+            {
+              "name": "sum",
+              "args": {
+                "a": 5,
+                "b": 5
+              },
+              "type": "tool_call",
+              "id": "call_RlzgrW0qnJrU93Sf5vlPJEme"
+            }
+          ],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "output_tokens": 17,
+            "input_tokens": 70,
+            "total_tokens": 87,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "ToolMessage"
+        ],
+        "kwargs": {
+          "content": "10",
+          "tool_call_id": "call_RlzgrW0qnJrU93Sf5vlPJEme",
+          "name": "sum",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "5bb24e21-91cf-4c7d-b66d-bf92f2bf1347"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "content": "The sum of 5 + 5 is 10.",
+          "additional_kwargs": {},
+          "response_metadata": {
+            "tokenUsage": {
+              "promptTokens": 95,
+              "completionTokens": 13,
+              "totalTokens": 108
+            },
+            "finish_reason": "stop",
+            "model_name": "gpt-4o-2024-08-06",
+            "usage": {
+              "prompt_tokens": 95,
+              "completion_tokens": 13,
+              "total_tokens": 108,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "audio_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "audio_tokens": 0,
+                "accepted_prediction_tokens": 0,
+                "rejected_prediction_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_07871e2ad8"
+          },
+          "id": "chatcmpl-C3ntLquOCyRiHqyt3o6PtAeaDRW0P",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "output_tokens": 13,
+            "input_tokens": 95,
+            "total_tokens": 108,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "HumanMessage"
+        ],
+        "kwargs": {
+          "content": "State your name?",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "0e20cad4-aad0-40d8-b384-85a7494b5ceb"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "content": "My name is Carl. I'm your helpful math assistant.",
+          "additional_kwargs": {},
+          "response_metadata": {
+            "tokenUsage": {
+              "promptTokens": 119,
+              "completionTokens": 12,
+              "totalTokens": 131
+            },
+            "finish_reason": "stop",
+            "model_name": "gpt-4o-2024-08-06",
+            "usage": {
+              "prompt_tokens": 119,
+              "completion_tokens": 12,
+              "total_tokens": 131,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "audio_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "audio_tokens": 0,
+                "accepted_prediction_tokens": 0,
+                "rejected_prediction_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_ff25b2783a"
+          },
+          "id": "chatcmpl-C3ntODrCAV6C1hSU9TDlvyLLuzVOa",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "output_tokens": 12,
+            "input_tokens": 119,
+            "total_tokens": 131,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "HumanMessage"
+        ],
+        "kwargs": {
+          "content": "What was the last result?",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "id": "ddd39c41-5555-4aad-815a-10b4cce52afe"
+        }
+      },
+      {
+        "lc": 1,
+        "type": "constructor",
+        "id": [
+          "langchain_core",
+          "messages",
+          "AIMessage"
+        ],
+        "kwargs": {
+          "content": "The last result was 10, which is the sum of 5 + 5.",
+          "additional_kwargs": {},
+          "response_metadata": {
+            "tokenUsage": {
+              "promptTokens": 144,
+              "completionTokens": 19,
+              "totalTokens": 163
+            },
+            "finish_reason": "stop",
+            "model_name": "gpt-4o-2024-08-06",
+            "usage": {
+              "prompt_tokens": 144,
+              "completion_tokens": 19,
+              "total_tokens": 163,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "audio_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "audio_tokens": 0,
+                "accepted_prediction_tokens": 0,
+                "rejected_prediction_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_07871e2ad8"
+          },
+          "id": "chatcmpl-C3ntPgcWLQYlJYVJair2kZj4Kcjqk",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": {
+            "output_tokens": 19,
+            "input_tokens": 144,
+            "total_tokens": 163,
+            "input_token_details": {
+              "audio": 0,
+              "cache_read": 0
+            },
+            "output_token_details": {
+              "audio": 0,
+              "reasoning": 0
+            }
+          }
+        }
+      }
+    ]
+  },
+  "next": [],
+  "tasks": [],
+  "metadata": {
+    "source": "loop",
+    "step": 13,
+    "parents": {},
+    "thread_id": "conversation-1"
+  },
+  "config": {
+    "configurable": {
+      "thread_id": "conversation-1",
+      "checkpoint_id": "1f077a8f-9fee-6cd0-800d-86d2b594af5b",
+      "checkpoint_ns": ""
+    }
+  },
+  "createdAt": "2025-08-12T18:20:08.093Z",
+  "parentConfig": {
+    "configurable": {
+      "thread_id": "conversation-1",
+      "checkpoint_ns": "",
+      "checkpoint_id": "1f077a8f-9fe7-67a0-800c-160eea70de1d"
+    }
+  }
+}
