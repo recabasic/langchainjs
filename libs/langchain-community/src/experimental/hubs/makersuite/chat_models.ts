@@ -152,7 +152,14 @@ export class ChatGooglePaLM
   constructor(fields?: GooglePaLMChatInput) {
     super(fields ?? {});
 
-    this.model = fields?.model ?? this.model;
+    this.model =
+      fields?.model ??
+      /**
+       * ToDo: remove in v2
+       */
+      // @ts-expect-error - modelName has been removed from public types, keeping it to reduce the user impact
+      fields?.modelName ??
+      this.model;
 
     this.temperature = fields?.temperature ?? this.temperature;
     if (this.temperature && (this.temperature < 0 || this.temperature > 1)) {
