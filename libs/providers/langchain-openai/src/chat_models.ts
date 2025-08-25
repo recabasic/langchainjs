@@ -665,7 +665,7 @@ export abstract class BaseChatOpenAI<
   get lc_aliases(): Record<string, string> {
     return {
       apiKey: "openai_api_key",
-      model: "model_name",
+      modelName: "model",
     };
   }
 
@@ -689,6 +689,12 @@ export abstract class BaseChatOpenAI<
       "streaming",
       "streamUsage",
       "model",
+      /**
+       * This has to remain as long as we want to stay backwards compatible with old
+       * serialization strings that use modelName.
+       * @deprecated
+       */
+      "modelName",
       "modelKwargs",
       "stop",
       "stopSequences",
