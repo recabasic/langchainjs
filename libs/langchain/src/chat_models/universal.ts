@@ -63,11 +63,11 @@ export const MODEL_PROVIDER_CONFIG = {
     className: "ChatCohere",
   },
   "google-vertexai": {
-    package: "@langchain/google-vertexai",
+    package: "@langchain/google",
     className: "ChatVertexAI",
   },
   "google-vertexai-web": {
-    package: "@langchain/google-vertexai-web",
+    package: "@langchain/google",
     className: "ChatVertexAI",
   },
   "google-genai": {
@@ -624,8 +624,7 @@ export async function initChatModel<
  *   - openai (@langchain/openai)
  *   - anthropic (@langchain/anthropic)
  *   - azure_openai (@langchain/openai)
- *   - google-vertexai (@langchain/google-vertexai)
- *   - google-vertexai-web (@langchain/google-vertexai-web)
+ *   - google-vertexai (@langchain/google)
  *   - google-genai (@langchain/google-genai)
  *   - bedrock (@langchain/aws)
  *   - cohere (@langchain/cohere)

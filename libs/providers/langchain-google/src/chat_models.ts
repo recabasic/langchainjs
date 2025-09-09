@@ -45,11 +45,11 @@ export interface ChatVertexAIInput<Env extends Environment>
  * Integration with Google Vertex AI chat models.
  *
  * Setup:
- * Install `@langchain/google-vertexai` and set your stringified
+ * Install `@langchain/google` and set your stringified
  * Vertex AI credentials as an environment variable named `GOOGLE_APPLICATION_CREDENTIALS`.
  *
  * ```bash
- * npm install @langchain/google-vertexai
+ * npm install @langchain/google
  * export GOOGLE_APPLICATION_CREDENTIALS="path/to/credentials"
  * ```
  *
@@ -82,7 +82,7 @@ export interface ChatVertexAIInput<Env extends Environment>
  * <summary><strong>Instantiate</strong></summary>
  *
  * ```typescript
- * import { ChatVertexAI } from '@langchain/google-vertexai';
+ * import { ChatVertexAI } from '@langchain/google';
  *
  * const llm = new ChatVertexAI({
  *   model: "gemini-1.5-pro",

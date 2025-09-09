@@ -3,9 +3,9 @@ import { z } from "zod";
 import { createAgent, HumanMessage, tool } from "langchain";
 
 import { ChatPromptTemplate } from "@langchain/core/prompts";
-import { ChatVertexAI } from "@langchain/google-vertexai";
+import { ChatVertexAI } from "@langchain/google";
 // Uncomment this if you're running inside a web/edge environment.
-// import { ChatVertexAI } from "@langchain/google-vertexai-web";
+// import { ChatVertexAI } from "@langchain/google/web";
 
 const llm: any = new ChatVertexAI({
   temperature: 0,

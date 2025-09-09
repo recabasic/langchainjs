@@ -2,7 +2,7 @@ import {
   ChatPromptTemplate,
   MessagesPlaceholder,
 } from "@langchain/core/prompts";
-import { ChatVertexAI } from "@langchain/google-vertexai";
+import { ChatVertexAI } from "@langchain/google";
 import { HumanMessage } from "@langchain/core/messages";
 import fs from "fs";
 import { z } from "zod";

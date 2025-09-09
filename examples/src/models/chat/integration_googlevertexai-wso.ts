@@ -1,7 +1,7 @@
-import { ChatVertexAI } from "@langchain/google-vertexai";
+import { ChatVertexAI } from "@langchain/google";
 import { z } from "zod";
 // Or, if using the web entrypoint:
-// import { ChatVertexAI } from "@langchain/google-vertexai-web";
+// import { ChatVertexAI } from "@langchain/google/web";
 
 const calculatorSchema = z.object({
   operation: z

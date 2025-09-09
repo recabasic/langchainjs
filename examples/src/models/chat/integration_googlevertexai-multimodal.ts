@@ -1,5 +1,5 @@
 import { ChatPromptTemplate } from "@langchain/core/prompts";
-import { ChatVertexAI } from "@langchain/google-vertexai";
+import { ChatVertexAI } from "@langchain/google";
 import fs from "node:fs";
 
 const model = new ChatVertexAI({

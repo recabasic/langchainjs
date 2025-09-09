@@ -13,7 +13,7 @@ const gpt4o = await initChatModel("gpt-4o", {
 const claudeOpus = await initChatModel("anthropic:claude-3-opus-20240229", {
   temperature: 0,
 });
-// Returns a @langchain/google-vertexai ChatVertexAI instance.
+// Returns a @langchain/google ChatVertexAI instance.
 const gemini15 = await initChatModel("google-vertexai:gemini-1.5-pro", {
   temperature: 0,
 });

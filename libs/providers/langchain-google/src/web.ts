@@ -69,4 +69,4 @@ export type ChatVertexAIInput = CommonChatVertexAIInput<Environment>;
 /**
  * export auth primitives
  */
-export { WebGoogleAuthOptions, WebGoogleAuth } from "./auth/web.js";
+export { type WebGoogleAuthOptions, WebGoogleAuth } from "./auth/web.js";

@@ -1,6 +1,6 @@
-import { ChatVertexAI } from "@langchain/google-vertexai";
+import { ChatVertexAI } from "@langchain/google";
 // Or, if using the web entrypoint:
-// import { ChatVertexAI } from "@langchain/google-vertexai-web";
+// import { ChatVertexAI } from "@langchain/google/web";
 
 const model = new ChatVertexAI({
   temperature: 0.7,

@@ -25,19 +25,6 @@ if (currentPackageJson.devDependencies?.["@langchain/core"]) {
   delete currentPackageJson.devDependencies["@langchain/core"];
 }
 
-if (
-  currentPackageJson.dependencies?.["@langchain/google-gauth"] &&
-  !currentPackageJson.dependencies["@langchain/google-gauth"].includes("rc")
-) {
-  const minVersion = semver.minVersion(
-    currentPackageJson.dependencies["@langchain/google-gauth"]
-  ).version;
-  currentPackageJson.dependencies = {
-    ...currentPackageJson.dependencies,
-    "@langchain/google-gauth": minVersion,
-  };
-}
-
 fs.writeFileSync(
   communityPackageJsonPath,
   JSON.stringify(currentPackageJson, null, 2)

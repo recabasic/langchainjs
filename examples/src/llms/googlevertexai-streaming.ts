@@ -1,6 +1,6 @@
-import { VertexAI } from "@langchain/google-vertexai";
+import { VertexAI } from "@langchain/google";
 // Or, if using the web entrypoint:
-// import { VertexAI } from "@langchain/google-vertexai-web";
+// import { VertexAI } from "@langchain/google/web";
 
 const model = new VertexAI({
   temperature: 0.7,
