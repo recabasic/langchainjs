@@ -125,6 +125,8 @@ export class OpenAI<CallOptions extends OpenAICallOptions = OpenAICallOptions>
 
   apiKey?: string;
 
+  baseUrl?: string;
+
   organization?: string;
 
   protected client: OpenAIClient;
@@ -193,6 +195,7 @@ export class OpenAI<CallOptions extends OpenAICallOptions = OpenAICallOptions>
 
     this.clientConfig = {
       apiKey: this.apiKey,
+      baseUrl: fields?.baseUrl,
       organization: this.organization,
       dangerouslyAllowBrowser: true,
       ...fields?.configuration,
